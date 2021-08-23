@@ -1,0 +1,247 @@
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background-image:linear-gradient(135deg, #FFF, #FFF5F5);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 35px ;
+  font-size: 1rem;
+  color: #50b3f5;
+  margin: 0;
+  width: 100%;
+}
+
+/* SEÇÃO DA LOGO CDG - MOBILE */
+
+.logo-div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+  width: 85%;
+  padding-bottom: 35px;
+}
+
+.logo-div img{
+  width: 35%;
+}
+
+/* SEÇÃO DA IMAGEM CDG - MOBILE */
+
+.image-div  {
+  background-image: url("../images/games.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 300px;
+  width: 100%;
+}
+
+/* SEÇÃO DE TEXTO - MOBILE */
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 85%;
+  padding-top: 30px;
+}
+
+h1 {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 2.75em;
+  text-align: center;
+  line-height: 1.2em;
+  margin-bottom: 0;
+  letter-spacing: .25em;
+  max-width: 300px;
+}
+
+h1 span {
+  font-weight: 600;
+  color: #413A3A;
+}
+
+p {
+  text-align: center;
+  line-height: 1.6em;
+  font-size: .92em;
+  max-width: 400px;
+}
+
+.image-div img {
+  display: none;
+}
+
+/* SEÇÃO DE ENTRADA DE E-MAIL - MOBILE */
+
+.email-validator {
+  border: 1px solid #1100fc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 30px;
+  margin-top: 25px;
+  max-width: 400px;
+}
+
+.email-validator input {
+  padding: 15px 30px 15px 30px;
+  border-radius: 30px;
+  border: none;
+  background: none;
+}
+
+input:focus, textarea {
+    outline: none !important;
+}
+
+.email-validator input::placeholder {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.1em;
+  color: #004e83;
+  opacity: .5;
+}
+
+button {
+  background-image: url("../images/icon-arrow.svg"), linear-gradient(#fdadad, #ff083e);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 25px 55px;
+  border-radius: 25px;
+  border: none;
+  margin-top: -1px;
+ 
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+button:active {
+  transform: scale(.98);
+}
+
+.validate-message {
+  color: #ff0004;
+  text-align: left;
+  width: 90%;
+  font-size: .8em;
+}
+
+.active {
+  border: 1px solid  #ff6769;
+}
+
+.hide {
+  display: none;
+}
+
+.success {
+  color: #009708;
+}
+
+/*Para dispositivos com no minimo de 700px de largura, alterações (responsivo)*/
+
+@media (min-width: 700px) {
+
+  .logo-div img {
+    width: 25%;
+  }
+
+  .content-container {
+    padding-top: 50px;
+  }
+
+  .image-div {
+    height: 500px;
+  }
+
+  .content-container {
+    flex-direction: row;
+    flex-flow: row wrap;
+  }
+}
+
+/*Para dispositivos com no minimo de 900px de largura, alterações (responsivo)*/
+
+@media (min-width: 900px) {
+
+  body {
+    display: grid;
+    grid-template-columns: 57% 43%;
+    grid-template-rows: 20% 60%;
+    height: 100%;
+    padding: 0;
+    background-image: url("../images/bg-pattern-desktop.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top left;
+
+  }
+
+  .logo-div {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-left: 50px;
+    width: 60%;
+  }
+
+
+  .image-div {
+    background-image: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    order: 2;
+    height: 100%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .image-div img {
+    display: flex;
+    width: inherit;
+  }
+
+  .content-container {
+    justify-content: flex-start;
+  }
+
+
+  h1 {
+    font-size: 3.5em;
+    text-align: left;
+    margin-top: 0;
+    width: 50%;
+  }
+
+  p {
+    font-size: 1em;
+    max-width: none;
+    text-align: left;
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .validate-message {
+    padding-left: 25px;
+  }
+}
